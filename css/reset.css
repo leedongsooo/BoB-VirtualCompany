@@ -1,0 +1,41 @@
+/* 웹폰트를 가져와보자 */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+/* 아이콘을 가져와보자 */
+@import url('https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: inherit;
+    font-weight: inherit;
+    color: inherit;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+
+}
+
+em,
+address {
+    font-style: normal;
+}
+
+img {
+    /* 이미지 사이의 간격을 없앤다 */
+    vertical-align: middle;
+}
+
+body {
+    line-height: 1;
+    letter-spacing: -0.025em;
+    font-family: 'Roboto', 'Noto Sans KR', sans-serif;
+    color: #444444;
+}

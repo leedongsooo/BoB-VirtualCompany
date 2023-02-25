@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        *::after,
+        *::before {
+            box-sizing: border-box;
+        }
+
+        .box {
+            position: relative;
+            width: 500px;
+            height: 500px;
+            background: #ddd;
+        }
+
+        .box::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 0;
+            height: 20px;
+            background: tomato;
+            transition: 0.5s 2s;
+        }
+
+        .box:hover::before {
+            width: 100%;
+            transition: 0.5s 0.5s;
+        }
+
+
+        .box::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 20px;
+            height: 0;
+            background: tomato;
+            transition: 0.5s 1.5s;
+        }
+
+        .box:hover::after {
+            height: 100%;
+            transition: 0.5s 1s;
+        }
+
+        .case::before {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 0;
+            height: 20px;
+            background: tomato;
+            transition: 0.5s 1s;
+        }
+
+        .box:hover .case::before {
+            width: 100%;
+            transition: 0.5s 1.5s;
+        }
+
+        .case::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 20px;
+            height: 0;
+            background: tomato;
+            transition: 0.5s 0.5s;
+        }
+
+        .box:hover .case::after {
+            height: 100%;
+            transition: 0.5s 2s;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <div class="case">
+            <span>내용</span>
+        </div>
+    </div>
+</body>
+
+</html>
