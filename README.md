@@ -1,2 +1,2 @@
-# practice_02
-극동건설 클론코딩
+# BoB-VirtualCompany
+MOM 웹사이트
