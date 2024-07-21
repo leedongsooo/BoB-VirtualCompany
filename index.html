@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MOM 모터스</title>
+    <title>극동건설</title>
     <!-- 순서지키기 -->
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/slick.css">
@@ -13,6 +13,19 @@
     <script src="./js/jquery-1.12.4.min.js"></script>
     <script src="./js/slick.min.js"></script>
     <script src="./js/main.js"></script>
+    <script>
+        $(document).ready(function() {
+            // 페이지 로드 시 초기화면 설정
+            $("#main-content").load("./main.html");
+
+            // 메뉴 클릭 이벤트 설정
+            $(".gnb a").click(function(event) {
+                event.preventDefault();
+                const page = $(this).attr("href");
+                $("#main-content").load(page);
+            });
+        });
+    </script>
 </head>
 
 <body>
@@ -25,6 +38,7 @@
                 <h1>
                     <a href="/">
                         <div class="logo">
+
                         </div>
                     </a>
                 </h1>
@@ -38,8 +52,8 @@
                                     <div class="left">
                                         <div class="container">
                                             <span>회사소개</span>
-                                            <p>월등한 AI에 기반한 완벽 제조로<br />
-                                                제조업의 경쟁력을 극대화합니다.</p>
+                                            <p>월등한 기술력에 기반한 완벽 시공으로<br />
+                                                대한민국의 경쟁력을 극대화합니다.</p>
                                             <figure>
                                                 <img src="./img/menu1.png" alt="">
                                             </figure>
@@ -48,32 +62,31 @@
 
                                     <div class="right">
                                         <ul>
-                                            <li><a href="">CEO 인사말</a></li>
-                                            <li><a href="">기업이념 </a>
+                                            <li><a href="ceo.html">CEO 인사말</a></li>
+                                            <li><a href="philosophy.html">기업이념</a>
                                                 <ul>
-                                                    <li><a href="">비전</a></li>
-                                                    <li><a href="">안전경영</a></li>
-                                                    <li><a href="">지속가능경영</a></li>
+                                                    <li><a href="vision.html">비전</a></li>
+                                                    <li><a href="safety.html">안전경영</a></li>
+                                                    <li><a href="sustainability.html">지속가능경영</a></li>
                                                 </ul>
                                             </li>
-                                            <li><a href="">기업연혁</a>
+                                            <li><a href="history.html">기업연혁</a>
                                                 <ul>
-                                                    <li><a href="">2011~현재</a></li>
-                                                    <li><a href="">2001~2010</a></li>
-                                                    <li><a href="">1991~2000</a></li>
-                                                    <li><a href="">1991~2000</a></li>
-                                                    <li><a href="">1947~1980</a></li>
+                                                    <li><a href="history_2011.html">2011~현재</a></li>
+                                                    <li><a href="history_2001.html">2001~2010</a></li>
+                                                    <li><a href="history_1991.html">1991~2000</a></li>
+                                                    <li><a href="history_1947.html">1947~1980</a></li>
                                                 </ul>
                                             </li>
-                                            <li><a href="">수상경력</a></li>
-                                            <li><a href="">조직도</a></li>
-                                            <li><a href="">찾아오시는 길</a></li>
+                                            <li><a href="awards.html">수상경력</a></li>
+                                            <li><a href="organization.html">조직도</a></li>
+                                            <li><a href="directions.html">찾아오시는 길</a></li>
                                         </ul>
                                     </div>
                                 </div>
                             </nav>
                         </li>
-                        <li><a href="">주요사업</a>
+                        <li><a href="business.html">주요사업</a>
                             <nav class="smenu">
                                 <div class="smenu_inner">
                                     <div class="left">
@@ -87,30 +100,30 @@
                                     <div class="right">
                                         <ul>
                                             <li>
-                                                <a href="">대표실적</a>
+                                                <a href="projects.html">대표실적</a>
                                                 <ul>
-                                                    <li><a href="">경부고속도로</a></li>
-                                                    <li><a href="">아산만방조제</a></li>
-                                                    <li><a href="">한국종합무역센터</a></li>
-                                                    <li><a href="">수도권 광역상수도사업1~5단계</a></li>
-                                                    <li><a href="">대구 월드컵 경기장</a></li>
+                                                    <li><a href="project_kyungbu.html">경부고속도로</a></li>
+                                                    <li><a href="project_asan.html">아산만방조제</a></li>
+                                                    <li><a href="project_tradecenter.html">한국종합무역센터</a></li>
+                                                    <li><a href="project_waterworks.html">수도권 광역상수도사업1~5단계</a></li>
+                                                    <li><a href="project_stadium.html">대구 월드컵 경기장</a></li>
                                                 </ul>
                                             </li>
-                                            <li><a href="">토목</a></li>
-                                            <li><a href="">건축</a></li>
-                                            <li><a href="">플랜트*환경</a></li>
-                                            <li><a href="">해외사업</a></li>
+                                            <li><a href="civil.html">토목</a></li>
+                                            <li><a href="architecture.html">건축</a></li>
+                                            <li><a href="plant.html">플랜트*환경</a></li>
+                                            <li><a href="overseas.html">해외사업</a></li>
                                         </ul>
                                     </div>
                                 </div>
                             </nav>
                         </li>
-                        <li><a href="">R&D</a>
+                        <li><a href="rnd.html">R&D</a>
                             <nav class="smenu">
                                 <div class="smenu_inner">
                                     <div class="left">
                                         <span>R&D</span>
-                                        <p>월등한 기술력에 기반한 해외 수출로<br />
+                                        <p>월등한 기술력에 기반한 완벽 시공으로<br />
                                             대한민국의 경쟁력을 극대화합니다.</p>
                                         <figure>
                                             <img src="./img/menu3.png" alt="">
@@ -119,54 +132,54 @@
                                     <div class="right">
                                         <ul>
                                             <li>
-                                                <a href="">기술연구소</a>
+                                                <a href="lab.html">기술연구소</a>
                                                 <ul>
-                                                    <li><a href="">기술연구소 소개</a></li>
-                                                    <li><a href="">기술연구소 조직</a></li>
+                                                    <li><a href="lab_intro.html">기술연구소 소개</a></li>
+                                                    <li><a href="lab_organization.html">기술연구소 조직</a></li>
                                                 </ul>
                                             </li>
                                             <li>
-                                                <a href="">연구실적</a>
+                                                <a href="research.html">연구실적</a>
                                                 <ul>
-                                                    <li><a href="">PF/R공법</a></li>
-                                                    <li><a href="">EXT-PILE공법</a></li>
+                                                    <li><a href="pf.html">PF/R공법</a></li>
+                                                    <li><a href="extpile.html">EXT-PILE공법</a></li>
                                                 </ul>
                                             </li>
-                                            <li><a href="">신기술공법</a></li>
+                                            <li><a href="technology.html">신기술공법</a></li>
                                         </ul>
                                     </div>
                                 </div>
                             </nav>
                         </li>
                         
-                        <li><a href="">제품주문</a>
+                        <li><a href="order.html">주문제작</a>
                             <nav class="smenu">
                                 <div class="smenu_inner">
                                     <div class="left">
-                                        <span>제품주문</span>
-                                        <p>MOM의 차량을 커스터마이징을 통해<br />
-                                            주문제작을 할 수 있는 페이지입니다..</p>
+                                        <span>주문제작</span>
+                                        <p>월등한 기술력에 기반한 완벽 시공으로<br />
+                                            대한민국의 경쟁력을 극대화합니다.</p>
                                         <figure>
                                             <img src="./img/menu5.jpg" alt="">
                                         </figure>
                                     </div>
                                     <div class="right">
                                         <ul>
-                                            <li><a href="">인재상</a></li>
-                                            <li><a href="">인재육성</a></li>
+                                            <li><a href="talent.html">인재상</a></li>
+                                            <li><a href="development.html">인재육성</a></li>
                                             <li>
-                                                <a href="">인사제도</a>
+                                                <a href="hr.html">인사제도</a>
                                                 <ul>
-                                                    <li><a href="">평가보상</a></li>
-                                                    <li><a href="">복리후생</a></li>
+                                                    <li><a href="evaluation.html">평가보상</a></li>
+                                                    <li><a href="welfare.html">복리후생</a></li>
                                                 </ul>
                                             </li>
                                             <li>
-                                                <a href="">채용정보</a>
+                                                <a href="recruit.html">채용정보</a>
                                                 <ul>
-                                                    <li><a href="">채용안내</a></li>
-                                                    <li><a href="">채용공고</a></li>
-                                                    <li><a href="">FAQ</a></li>
+                                                    <li><a href="recruit_guide.html">채용안내</a></li>
+                                                    <li><a href="recruit_notice.html">채용공고</a></li>
+                                                    <li><a href="faq.html">FAQ</a></li>
                                                 </ul>
                                             </li>
                                         </ul>
@@ -178,7 +191,7 @@
                 </nav>
                 <!-- gnb} -->
                 <div class="bars">
-                    <!-- 메뉴바 오른쪽 여백 간격 조정 -->
+                    <a href=""><i class="xi-bars"></i></a>
                 </div>
             </div>
             <!-- inner} -->
@@ -186,540 +199,17 @@
         <!-- header} -->
 
 
-        <!-- {main -->
-        <main>
-            <!-- {mainVisual -->
-            <section class="mainVisual">
-                <!-- {mainSlide -->
-                <div class="main_slide">
-                    <figure class="itm01">
-                        <!-- background로 img 넣기 -->
-                        <div class="inner">
-                            <!-- 문구 -->
-                            <span>미래의 이동성을 창조합니다.</span>
-                            <p> MoM은 디지털 트윈과 AI 기반의 스마트팩토리로<br />
-                                혁신적인 차량 생산을 선도합니다.</p>
-                            <strong>SCROLL DOWN</strong>
-                        </div>
-                        <img src="./img/main_slide01.png" alt="">
-                    </figure>
-                    <figure class="itm02">
-                        <!-- background로 img 넣기 -->
-                        <div class="inner">
-                            <!-- 문구 -->
-                            <span>투명하고 신뢰할 수 있는 시스템</span>
-                            <p>블록체인을 활용하여 모든 부품의 완전성을 보장하고,<br />
-                                고객에게 최고의 안전성과 신뢰를 제공합니다.</p>
-                            <strong>SCROLL DOWN</strong>
-                        </div>
-                        <img src="./img/main_slide02.jpg" alt="">
-                    </figure>
-                    <figure class="itm03">
-                        <!-- background로 img 넣기 -->
-                        <div class="inner">
-                            <!-- 문구 -->
-                            <span>고객 편의성이 최우선인 AI 서비스</span>
-                            <p>MOM은 차량 구매부터 유지보수까지 <br />
-                                AI 기반 서비스를 통해 소비자 경험을 혁신적으로 개선합니다.</p>
-                            <strong>SCROLL DOWN</strong>
-                        </div>
-                        <img src="./img/main_slide03.jpg" alt="">
-                    </figure>
-                </div>
-                <!-- mainSlide} -->
-            </section>
-            <!-- mainVisual} -->
-
-            <!-- {mainBusiness -->
-            <section class="mainBusiness">
-                <div class="main_bn">
-                    <div class="inner">
-                        <div class="top">
-                            <div class="itm">
-                                <a href="">
-                                    <div class="container">
-                                        <span>ELEC<br />
-                                            MARK-5</span>
-                                        <p>2024년도 1분기 판매량 1위</p>
-                                    </div>
-                                    <figure>
-                                        <img src="./img/business01.png" alt="">
-                                    </figure>
-                                </a>
-
-                            </div>
-                            <div class="itm">
-                                <a href="">
-                                    <div class="container">
-                                        <span>대형 전기차<br />
-                                            PASLA</span>
-                                        <p>설문조사 선호도 1위</p>
-                                    
-                                    </div>
-                                    <figure>
-                                        <img src="./img/business02.jpg" alt="">
-                                    </figure>
-                                </a>
-
-                            </div>
-                            <div class="itm">
-                                <div class="tit">
-                                    <h2>Models</h2>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="bottom">
-                            <div class="itm">
-
-                            </div>
-                            <div class="itm">
-                                <a href="">
-                                    <div class="container">
-                                        <span>ELEC<br />
-                                            TURTLE<br />
-                                            </span>
-                                        <p>‘2023 iF 디자인 어워드’ 수상</p>
-                                    </div>
-                                    <figure>
-                                        <img src="./img/business03.png" alt="">
-                                    </figure>
-                                </a>
-
-                            </div>
-                            <div class="itm">
-                                <a href="">
-                                    <div class="container">
-                                        <span>MoM 대표 차량<br />
-                                            MARK-4</span>
-                                        <p>전체 판매량 1위</p>
-                                    </div>
-                                    <figure>
-                                        <img src="./img/business04.png" alt="">
-                                    </figure>
-                                </a>
-
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-            </section>
-            <!-- mainBusiness} -->
-             
-            
-
-            <!-- {mainPortfolio -->
-            <section class="mainPortfolio">
-                <div class="main_port">
-                    <div class="inner">
-                        <div class="intro">
-                            <h2>PORTFOLIO</h2>
-                            <div class="buttons">
-                                <h3>MOM 모터스의 주요 연혁입니다.</h3>
-                            </div>
-                        </div>
-                        <div class="tabs">
-                            <div class="tab active">
-                                <div class="slider list01">
-                                    <figure class="item01">
-                                        <div class="container">
-                                            <span>도로/터널/교량</span>
-                                            <em>CIVILENGINEERING WORKS</em>
-                                            <p>극동건설은 허허벌판에 길을 내고, 망망대해에 다리를 놓으며,<br />
-                                                대한민국 지도를 바꾸어 왔습니다.</p>
-                                            <a href="">Detail view</a>
-                                        </div>
-                                        <img src="./img/port01_01.jpg" alt="">
-                                    </figure>
-                                    <figure class="item02">
-                                        <div class="container">
-                                            <span>철도/지하철</span>
-                                            <em>CIVILENGINEERING WORKS</em>
-                                            <p>극동건설은 철길을 따라, 지하공간을 지나<br />
-                                                대한민국의 경제발전을 이끌어 왔습니다.</p>
-                                            <a href="">Detail view</a>
-                                        </div>
-                                        <img src="./img/port01_02.jpg" alt="">
-                                    </figure>
-                                    <figure class="item03">
-                                        <div class="container">
-                                            <span>댐/항만/수자원</span>
-                                            <em>CIVILENGINEERING WORKS</em>
-                                            <p>극동건설은 우수한 항만개발 역량을 발휘하여<br />
-                                                대한민국을 동북아 허브 물류기지로 만들겠습니다.</p>
-                                            <a href="">Detail view</a>
-                                        </div>
-                                        <img src="./img/port01_03.jpg" alt="">
-                                    </figure>
-                                    <figure class="item04">
-                                        <div class="container">
-                                            <span>단지조성</span>
-                                            <em>CIVILENGINEERING WORKS</em>
-                                            <p>극동건설은 우수한 토목 시공능력을 바탕으로<br />
-                                                대한민국의 국토개발에 앞장서 왔습니다.</p>
-                                            <a href="">Detail view</a>
-                                        </div>
-                                        <img src="./img/port01_04.jpg" alt="">
-                                    </figure>
-                                </div>
-                            </div>
-
-                            <div class="tab">
-                                <div class="slider list02">
-                                    <figure class="item01">
-                                        <div class="container">
-                                            <span>도로/터널/교량</span>
-                                            <em>CIVILENGINEERING WORKS</em>
-                                            <p>극동건설은 허허벌판에 길을 내고, 망망대해에 다리를 놓으며,<br />
-                                                대한민국 지도를 바꾸어 왔습니다.</p>
-                                            <a href="">Detail view</a>
-                                        </div>
-                                        <img src="./img/port02_01.jpg" alt="">
-                                    </figure>
-                                    <figure class="item02">
-                                        <div class="container">
-                                            <span>철도/지하철</span>
-                                            <em>CIVILENGINEERING WORKS</em>
-                                            <p>극동건설은 철길을 따라, 지하공간을 지나<br />
-                                                대한민국의 경제발전을 이끌어 왔습니다.</p>
-                                            <a href="">Detail view</a>
-                                        </div>
-                                        <img src="./img/port02_02.jpg" alt="">
-                                    </figure>
-                                    <figure class="item03">
-                                        <div class="container">
-                                            <span>댐/항만/수자원</span>
-                                            <em>CIVILENGINEERING WORKS</em>
-                                            <p>극동건설은 우수한 항만개발 역량을 발휘하여<br />
-                                                대한민국을 동북아 허브 물류기지로 만들겠습니다.</p>
-                                            <a href="">Detail view</a>
-                                        </div>
-                                        <img src="./img/port02_03.jpg" alt="">
-                                    </figure>
-                                    <figure class="item04">
-                                        <div class="container">
-                                            <span>단지조성</span>
-                                            <em>CIVILENGINEERING WORKS</em>
-                                            <p>극동건설은 우수한 토목 시공능력을 바탕으로<br />
-                                                대한민국의 국토개발에 앞장서 왔습니다.</p>
-                                            <a href="">Detail view</a>
-                                        </div>
-                                        <img src="./img/port02_04.jpg" alt="">
-                                    </figure>
-                                </div>
-                            </div>
-
-                            <div class="tab">
-                                <div class="slider list03">
-                                    <figure class="item01">
-                                        <div class="container">
-                                            <span>도로/터널/교량</span>
-                                            <em>CIVILENGINEERING WORKS</em>
-                                            <p>극동건설은 허허벌판에 길을 내고, 망망대해에 다리를 놓으며,<br />
-                                                대한민국 지도를 바꾸어 왔습니다.</p>
-                                            <a href="">Detail view</a>
-                                        </div>
-                                        <img src="./img/port03_01.jpg" alt="">
-                                    </figure>
-                                    <figure class="item02">
-                                        <div class="container">
-                                            <span>철도/지하철</span>
-                                            <em>CIVILENGINEERING WORKS</em>
-                                            <p>극동건설은 철길을 따라, 지하공간을 지나<br />
-                                                대한민국의 경제발전을 이끌어 왔습니다.</p>
-                                            <a href="">Detail view</a>
-                                        </div>
-                                        <img src="./img/port03_02.jpg" alt="">
-                                    </figure>
-                                    <figure class="item03">
-                                        <div class="container">
-                                            <span>댐/항만/수자원</span>
-                                            <em>CIVILENGINEERING WORKS</em>
-                                            <p>극동건설은 우수한 항만개발 역량을 발휘하여<br />
-                                                대한민국을 동북아 허브 물류기지로 만들겠습니다.</p>
-                                            <a href="">Detail view</a>
-                                        </div>
-                                        <img src="./img/port03_03.jpg" alt="">
-                                    </figure>
-                                    <figure class="item04">
-                                        <div class="container">
-                                            <span>단지조성</span>
-                                            <em>CIVILENGINEERING WORKS</em>
-                                            <p>극동건설은 우수한 토목 시공능력을 바탕으로<br />
-                                                대한민국의 국토개발에 앞장서 왔습니다.</p>
-                                            <a href="">Detail view</a>
-                                        </div>
-                                        <img src="./img/port03_04.jpg" alt="">
-                                    </figure>
-                                </div>
-                            </div>
-
-                            <div class="tab">
-                                <div class="slider list04">
-                                    <figure class="item01">
-                                        <div class="container">
-                                            <span>도로/터널/교량</span>
-                                            <em>CIVILENGINEERING WORKS</em>
-                                            <p>극동건설은 허허벌판에 길을 내고, 망망대해에 다리를 놓으며,<br />
-                                                대한민국 지도를 바꾸어 왔습니다.</p>
-                                            <a href="">Detail view</a>
-                                        </div>
-                                        <img src="./img/port04_01.jpg" alt="">
-                                    </figure>
-                                    <figure class="item02">
-                                        <div class="container">
-                                            <span>철도/지하철</span>
-                                            <em>CIVILENGINEERING WORKS</em>
-                                            <p>극동건설은 철길을 따라, 지하공간을 지나<br />
-                                                대한민국의 경제발전을 이끌어 왔습니다.</p>
-                                            <a href="">Detail view</a>
-                                        </div>
-                                        <img src="./img/port01_02.jpg" alt="">
-                                    </figure>
-                                    <figure class="item03">
-                                        <div class="container">
-                                            <span>댐/항만/수자원</span>
-                                            <em>CIVILENGINEERING WORKS</em>
-                                            <p>극동건설은 우수한 항만개발 역량을 발휘하여<br />
-                                                대한민국을 동북아 허브 물류기지로 만들겠습니다.</p>
-                                            <a href="">Detail view</a>
-                                        </div>
-                                        <img src="./img/port02_03.jpg" alt="">
-                                    </figure>
-                                    <figure class="item04">
-                                        <div class="container">
-                                            <span>단지조성</span>
-                                            <em>CIVILENGINEERING WORKS</em>
-                                            <p>극동건설은 우수한 토목 시공능력을 바탕으로<br />
-                                                대한민국의 국토개발에 앞장서 왔습니다.</p>
-                                            <a href="">Detail view</a>
-                                        </div>
-                                        <img src="./img/port03_04.jpg" alt="">
-                                    </figure>
-                                </div>
-                            </div>
-
-                        </div>
-
-                    </div>
-                </div>
-            </section>
-            <!-- mainPortfolio} -->
-
-            <!-- {mainMid -->
-            <section class="mainMid">
-                <div class="main_mid">
-                    <div class="inner">
-                        <h2>MOM은 다음과 같은 기술력으로<br />
-                            세계 자동차 시장을 선도합니다.</h2>
-                        <div class="container">
-                            <div class="itm">
-                                <a href="">
-                                    <strong>스마트 <br />팩토리
-                                        <span class="bottom"></span>
-                                        <span class="right"></span>
-                                        <span class="top"></span>
-                                        <span class="left"></span>
-                                    </strong>
-
-                                </a>
-                                <p>최소 비용과 시간으로 고객 맞춤형 제품을<br />
-                                    생산하는 지능형 생산공장</p>
-                            </div>
-                            <div class="itm">
-                                <a href="">
-                                    <strong>인공<br />지능
-                                        <span class="bottom"></span>
-                                        <span class="right"></span>
-                                        <span class="top"></span>
-                                        <span class="left"></span>
-                                    </strong>
-                                </a>
-                                <p>인공지능(AI)를 활용해<br />
-                                    최적의 솔루션을 제공합니다.</p>
-                            </div>
-                            <div class="itm">
-                                <a href="">
-                                    <strong>블록<br />체인
-                                        <span class="bottom"></span>
-                                        <span class="right"></span>
-                                        <span class="top"></span>
-                                        <span class="left"></span>
-                                    </strong>
-                                </a>
-                                <p>블록체인을 통해 실시간으로<br />
-                                    정보가 안전하게 공유할 수 있습니다.</p>
-                            </div>
-                            <div class="itm">
-                                <a href="">
-                                    <strong>디지털<br />트윈
-                                        <span class="bottom"></span>
-                                        <span class="right"></span>
-                                        <span class="top"></span>
-                                        <span class="left"></span>
-                                    </strong>
-                                </a>
-                                <p>실제 데이터를 수집하여<br />
-                                    가상 화면을 통해 동일하게 구현하는 기술</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <!-- mainMid} -->
-
-            <!-- {mainPR -->
-            <section class="mainPR">
-                <div class="main_PR">
-                    <div class="inner">
-                        <div class="intro">
-                            <h2>PR Center</h2>
-                            <p> <br /></p>
-                            <p>세상에 없던 신기술을 개척하는 기업, MOM이 기술의 진보를 선도합니다</p>
-                        </div>
-
-
-                        <div class="miniwrap">
-                            <div class="left">
-                                <div class="itm">
-                                    <a href="">
-                                        <div class="tit">
-                                            <span>MOM뉴스</span>
-                                            <p>MOM의 다양한 소식을 가장 빠르게<br />
-                                                전달해드립니다</p>
-                                        </div>
-                                        <figure>
-                                            <img src="./img/pr_img1.jpg" alt="">
-                                        </figure>
-                                    </a>
-                                </div>
-                                <div class="itm">
-                                    <a href="">
-                                        <div class="tit">
-                                            <span>R&D</span>
-                                            <p>끊임없는 신기술 개발과 혁신으로<br />
-                                                MOM이 OT 공장의 진보를 위해<br />
-                                                노력하고 있습니다</p>
-                                        </div>
-                                        <figure>
-                                            <img src="./img/pr_img2.jpg" alt="">
-                                        </figure>
-                                    </a>
-                                </div>
-                            </div>
-
-
-
-                            <div class="right">
-                                <a href="">
-                                    <div class="box">
-                                        <div class="tit">
-                                            <span>언론속의</span>
-                                            <strong>MOM</strong>
-                                            <p>언론에 소개되는<br />
-                                                MOM의 소식을<br />
-                                                안내해드립니다</p>
-                                        </div>
-                                    </div>
-                                    <div class="arrow">
-                                        화살표
-                                    </div>
-                                </a>
-
-                                <a href="">
-                                    <div class="box">
-                                        <div class="tit">
-                                            <span>입주고객 </span>
-                                            <strong>A/S 안내</strong>
-                                            <p>스타클래스 입주 후<br />
-                                                A/S 신청에<br />
-                                                대한 안내 입니다</p>
-                                        </div>
-                                    </div>
-                                    <div class="arrow">
-                                        화살표
-                                    </div>
-                                </a>
-
-
-                                <a href="">
-                                    <div class="box">
-                                        <div class="tit">
-                                            <span>MOM</span>
-                                            <strong>인재채용</strong>
-                                            <p>MOM과 함께 성장해<br />
-                                                나갈 인재를 모집합니다</p>
-                                        </div>
-                                    </div>
-                                    <div class="arrow">
-                                        화살표
-                                    </div>
-                                </a>
-
-                                <a href="">
-                                    <div class="box">
-                                        <div class="tit">
-                                            <span>기업</span>
-                                            <strong>홍보영상</strong>
-                                            <p>MOM의 다양한<br />
-                                                홍보영상을 소개합니다</p>
-                                        </div>
-                                    </div>
-                                    <div class="arrow">
-                                        화살표
-                                    </div>
-                                </a>
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <!-- mainPR} -->
-
-            <!-- {mainBanner -->
-            <section class="mainBanner">
-                <div class="main_banner">
-                    <div class="inner">
-                        <a href="">
-                            <figure>
-                                <img src="./img/bottom_logo01.jpg" alt="">
-                            </figure>
-                        </a>
-                        <a href="">
-                            <figure>
-                                <img src="./img/bottom_logo02.jpg" alt="">
-                            </figure>
-                        </a>
-                        <a href="">
-                            <figure>
-                                <img src="./img/bottom_logo03.jpg" alt="">
-                            </figure>
-                        </a>
-                        <a href="">
-                            <figure>
-                                <img src="./img/bottom_logo04.jpg" alt="">
-                            </figure>
-                        </a>
-                        <a href="">
-                            <figure>
-                                <img src="./img/bottom_logo05.jpg" alt="">
-                            </figure>
-                        </a>
-                    </div>
-                </div>
-
-            </section>
-            <!-- mainBanner} -->
+        <main id="main-content">
+            <!-- 동적으로 로드될 콘텐츠 영역 -->
         </main>
-        <!-- main} -->
 
         <!-- {footer -->
         <footer class="footer">
             <div class="inner">
                 <div class="top">
-                    
+                    <figure>
+                        <img src="./img/ft_logo.png" alt="">
+                    </figure>
                     <ul>
                         <li><a href="">이용약관</a></li>
                         <li><a href="">개인정보처리방침</a></li>
@@ -728,8 +218,8 @@
                 </div>
                 <div class="bottom">
                     <div class="left">
-                        <address>서울특별시 강남구 테헤란로 163 </address>
-                        <p>&copy;2024 MOM. LTD. All Rights Reserved.</p>
+                        <address>서울특별시 마포구 마포대로 163 (서울신용보증재단), 9층</address>
+                        <p>&copy;2020 KUKDONG. LTD. All Rights Reserved.</p>
                     </div>
                     <div class="right">
                         <form action="">
@@ -746,6 +236,7 @@
         </footer>
         <!-- footer} -->
     </div>
+    
 </body>
 
 </html>

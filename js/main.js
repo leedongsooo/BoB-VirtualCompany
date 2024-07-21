@@ -15,10 +15,6 @@ $(function () {
 
 
 
-
-
-
-
     $('button').click(function () {
         var $this = $(this);
         var index = $this.index();
@@ -50,7 +46,18 @@ $(function () {
         pauseOnFocus: false,
     });
 
-
+    $(document).ready(function () {
+        // Load the default content (index.html)
+        $("#main-content").load("./partials/index.html");
+    
+        // Handle menu link clicks
+        $(".menu-link").click(function (e) {
+            e.preventDefault();
+            var page = $(this).data("page");
+            $("#main-content").load("./partials/" + page);
+        });
+    });
+    
 
 
 })
