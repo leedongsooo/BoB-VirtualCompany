@@ -1,4 +1,4 @@
-$(function () {
+$(function() {
     $('.main_slide').slick({
         pauseOnHover: false,
         pauseOnFocus: false,
@@ -6,16 +6,14 @@ $(function () {
         prevArrow: false,
         dots: true,
         autoplay: true,
-    })
+    });
 
     $('.list_slide').slick({
         pauseOnHover: false,
         pauseOnFocus: false,
-    })
+    });
 
-
-
-    $('button').click(function () {
+    $('button').click(function() {
         var $this = $(this);
         var index = $this.index();
 
@@ -28,36 +26,42 @@ $(function () {
 
         $current.removeClass('active');
         $post.addClass('active');
-        // 위의 코드는 탭메뉴 코드입니다.
 
         $('.slider').slick('setPosition');
-        // 탭 페이지 안에서 slick 사용시 – slick이 첫페이지에 있지 않으면 slick의 첫번째 이미지가 보이지 않고 2번째 부터 도는것을 확인 할 수 있다. 해당 문제는 탭이 active가 된 후 그 페이지에 slick이 있다면 = slick의 위치를 수동으로 새로 고쳐줘야 한다.
     });
 
-
-    // 기존 처음의 slick 적용
     $('.slider').slick({
         slidesToShow: 1,
         dots: false,
         autoplay: true,
         autoplaySpeed: 4000,
-        // 마우스가 올라가도 슬라이드 넘기기
         pauseOnHover: false,
         pauseOnFocus: false,
     });
 
-    $(document).ready(function () {
-        // Load the default content (index.html)
-        $("#main-content").load("./partials/index.html");
+    $(document).ready(function() {
+        // Load the default content
+        $("#main-content").load("./main.html");
+        history.replaceState({page: 'main'}, '', 'index.html');
     
         // Handle menu link clicks
-        $(".menu-link").click(function (e) {
+        $(".gnb a").click(function(e) {
             e.preventDefault();
-            var page = $(this).data("page");
-            $("#main-content").load("./partials/" + page);
+            var page = $(this).attr("href").replace('./partials/', '');
+            $("#main-content").load(`./partials/${page}`);
+            history.pushState({page: page}, '', page);
         });
+
+        // Handle browser navigation (back/forward buttons)
+        window.onpopstate = function(event) {
+            if (event.state && event.state.page) {
+                var page = event.state.page;
+                if (page === 'main') {
+                    $("#main-content").load('./main.html');
+                } else {
+                    $("#main-content").load(`./partials/${page}`);
+                }
+            }
+        };
     });
-    
-
-
-})
+});

@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="ko">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -17,32 +16,37 @@
         $(document).ready(function() {
             // 페이지 로드 시 초기화면 설정
             $("#main-content").load("./main.html");
+            history.replaceState({page: 'main'}, '', 'index.html');
 
             // 메뉴 클릭 이벤트 설정
             $(".gnb a").click(function(event) {
                 event.preventDefault();
-                const page = $(this).attr("href");
-                $("#main-content").load(page);
+                const page = $(this).attr("href").replace('./partials/', '');
+                $("#main-content").load(`./partials/${page}`);
+                history.pushState({page: page}, '', page);
             });
+
+            // 뒤로가기 및 앞으로가기 버튼 이벤트 처리
+            window.onpopstate = function(event) {
+                if (event.state && event.state.page) {
+                    const page = event.state.page;
+                    $("#main-content").load(`./partials/${page}`);
+                } else {
+                    $("#main-content").load('./main.html');
+                }
+            };
         });
     </script>
 </head>
-
 <body>
     <div class="Wrap">
-
-        <!-- {header -->
         <header class="header">
-            <!-- {inner -->
             <div class="inner">
                 <h1>
                     <a href="/">
-                        <div class="logo">
-
-                        </div>
+                        <div class="logo"></div>
                     </a>
                 </h1>
-                <!-- {gnb -->
                 <nav class="gnb">
                     <ul>
                         <li>
@@ -59,7 +63,6 @@
                                             </figure>
                                         </div>
                                     </div>
-
                                     <div class="right">
                                         <ul>
                                             <li><a href="ceo.html">CEO 인사말</a></li>
@@ -99,8 +102,7 @@
                                     </div>
                                     <div class="right">
                                         <ul>
-                                            <li>
-                                                <a href="projects.html">대표실적</a>
+                                            <li><a href="projects.html">대표실적</a>
                                                 <ul>
                                                     <li><a href="project_kyungbu.html">경부고속도로</a></li>
                                                     <li><a href="project_asan.html">아산만방조제</a></li>
@@ -131,15 +133,13 @@
                                     </div>
                                     <div class="right">
                                         <ul>
-                                            <li>
-                                                <a href="lab.html">기술연구소</a>
+                                            <li><a href="lab.html">기술연구소</a>
                                                 <ul>
                                                     <li><a href="lab_intro.html">기술연구소 소개</a></li>
                                                     <li><a href="lab_organization.html">기술연구소 조직</a></li>
                                                 </ul>
                                             </li>
-                                            <li>
-                                                <a href="research.html">연구실적</a>
+                                            <li><a href="research.html">연구실적</a>
                                                 <ul>
                                                     <li><a href="pf.html">PF/R공법</a></li>
                                                     <li><a href="extpile.html">EXT-PILE공법</a></li>
@@ -151,7 +151,6 @@
                                 </div>
                             </nav>
                         </li>
-                        
                         <li><a href="order.html">주문제작</a>
                             <nav class="smenu">
                                 <div class="smenu_inner">
@@ -189,21 +188,16 @@
                         </li>
                     </ul>
                 </nav>
-                <!-- gnb} -->
                 <div class="bars">
                     <a href=""><i class="xi-bars"></i></a>
                 </div>
             </div>
-            <!-- inner} -->
         </header>
-        <!-- header} -->
-
 
         <main id="main-content">
             <!-- 동적으로 로드될 콘텐츠 영역 -->
         </main>
 
-        <!-- {footer -->
         <footer class="footer">
             <div class="inner">
                 <div class="top">
@@ -234,9 +228,6 @@
                 </div>
             </div>
         </footer>
-        <!-- footer} -->
     </div>
-    
 </body>
-
 </html>
