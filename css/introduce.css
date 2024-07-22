@@ -1,0 +1,153 @@
+
+body {
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* 섹션 스타일 */
+.introduce {
+    padding: 0;
+    background-color: #f9f9f9;
+}
+
+.introduce .inner {
+    width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    padding-top: 100px; 
+}
+/* 홈>회사정보 스타일 */
+.breadcrumb {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.breadcrumb a {
+    color: #666;
+    text-decoration: none;
+}
+
+.breadcrumb span {
+    color: #333;
+}
+
+/* 인트로 헤더 스타일 */
+.intro-header {
+    position: relative;
+    background-image: url('../img/port04_01.jpg');
+    background-size: cover;
+    background-repeat: no-repeat; 
+    background-position: center; 
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    text-align: center;
+}
+
+.intro-header-content {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.intro-header h3 {
+    font-size: 36px;
+    font-weight: 700;
+    margin: 0;
+}
+
+/* 인트로 콘텐츠 스타일 */
+.intro-content {
+    margin: 40px 0;
+    text-align: center;
+}
+
+.intro-content p {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 20px;
+    line-height: 1.8;
+}
+
+.intro-content p.highlight {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* CEO 인사말, 기업이념, 기업연혁 스타일 */
+.ceo-message,
+.philosophy,
+.history {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+}
+
+.ceo-message h3,
+.philosophy h3,
+.history h3 {
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: #002264;
+}
+
+.ceo-message p,
+.philosophy p {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 10px;
+    line-height: 1.8;
+}
+
+.history ul {
+    list-style: none;
+    padding: 0;
+}
+
+.history ul li {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.history ul li strong {
+    color: #333;
+}
+
+/* 회사 정보 스타일 */
+.company-details {
+    background-color: #fff;
+    padding: 50px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 100px; /* footer와 간격을 넓히려고 추가했삼 */
+}
+
+.company-details h3 {
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: #002264;
+}
+
+.company-details ul {
+    list-style: none;
+    padding: 0;
+}
+
+.company-details ul li {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.company-details ul li strong {
+    color: #333;
+}
