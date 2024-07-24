@@ -1,106 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/jquery.fullpage.min.css">
+    <link rel="stylesheet" href="./css/slick.css">
+    <link rel="stylesheet" href="./css/main.css">
+    <script src="./js/jquery-1.12.4.min.js"></script>
+    <script src="./js/jquery.fullpage.min.js"></script>
+    <script src="./js/slick.min.js"></script>
+    <style>
+        
+        body {
+            background-color: #aaaaaa; /* 회색 배경 */
+        }
+        .mainVisual {
+            position: relative;
+            background: url(../img/car-bg.jpg) no-repeat center center/cover;
+        
+        }
 
-        <p>MOM의 차량을 커스터마이징을 통해<br />
-            주문제작을 할 수 있는 페이지입니다.</p>
+        .mainVisual::after {
+            position: absolute;
+            content: "  ";
+            bottom: 40px;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
 
-        <p>MOM의 차량을 커스터마이징을 통해<br />
-            주문제작을 할 수 있는 페이지입니다.</p>
+        .mainVisual::before {
+            position: absolute;
+            content: "";
+            width: 2px;
+            height: 40px;
+            background: #666;
+            bottom: 70px;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 999;
+        }
 
-        <p>MOM의 차량을 커스터마이징을 통해<br />
-            주문제작을 할 수 있는 페이지입니다.</p>
+        .mainVisual figure {
+            height: 950px;
+            position: relative;
+        }
 
-        <p>MOM의 차량을 커스터마이징을 통해<br />
-            주문제작을 할 수 있는 페이지입니다.</p>
+        .mainVisual .inner {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 1200px;
+            margin: 0 auto;
+        }
 
-        <p>MOM의 차량을 커스터마이징을 통해<br />
-            주문제작을 할 수 있는 페이지입니다.</p>
+        .mainVisual .inner span {
+            display: inline-block;
+            font-size: 60px;
+            font-weight: 700;
+            margin: 0 0 20px 0;
+        }
 
-        <p>MOM의 차량을 커스터마이징을 통해<br />
-            주문제작을 할 수 있는 페이지입니다.</p>
+        .mainVisual .inner p {
+            font-size: 20px;
+        }
 
-        <p>MOM의 차량을 커스터마이징을 통해<br />
-            주문제작을 할 수 있는 페이지입니다.</p>
+        .mainVisual .right {
+            position: absolute;
+            top: 50%;
+            right: -10%;
+            transform: translate(-50%, -50%);
+        }
 
-        <p>MOM의 차량을 커스터마이징을 통해<br />
-            주문제작을 할 수 있는 페이지입니다.</p>
+        .mainVisual .left {
+            position: absolute;
+            top: 50%;
+            left: -5%;
+            transform: translate(-50%, -50%);
+        }
 
-        <p>MOM의 차량을 커스터마이징을 통해<br />
-            주문제작을 할 수 있는 페이지입니다.</p>
+        .mainVisual figure img {
+            width: 100%;
+            transform: translate(1000px, 0);
+            opacity: 0;
+        }
 
-        <p>MOM의 차량을 커스터마이징을 통해<br />
-            주문제작을 할 수 있는 페이지입니다.</p>
+        .mainVisual figure.on img {
+            transform: translate(0, 0);
+            opacity: 1;
+            transition: transform 1s;
+        }
 
-        <p>MOM의 차량을 커스터마이징을 통해<br />
-            주문제작을 할 수 있는 페이지입니다.</p>
+        .mainVisual .slick-arrow {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 999;
+            background: none;
+            border: none;
+            font-size: 0;
+            width: 50px;
+            height: 50px;
+            border-top: 2px solid rgba(0, 0, 0, 0.5);
+            border-left: 2px solid rgba(0, 0, 0, 0.5);
+            display: none;
+        }
 
-        <p>MOM의 차량을 커스터마이징을 통해<br />
-            주문제작을 할 수 있는 페이지입니다.</p>
+        .mainVisual .slick-prev {
+            transform: translate(-50%, -50%) rotate(-45deg);
+            margin: 0 0 0 -700px;
+        }
 
-        <p>MOM의 차량을 커스터마이징을 통해<br />
-            주문제작을 할 수 있는 페이지입니다.</p>
+        .mainVisual .slick-next {
+            transform: translate(-50%, -50%) rotate(135deg);
+            margin: 0 0 0 700px;
+        }
 
-        <p>MOM의 차량을 커스터마이징을 통해<br />
-            주문제작을 할 수 있는 페이지입니다.</p>
+        .mainVisual .slick-dots {
+            position: absolute;
+            bottom: 200px;
+            left: 50%;
+            transform: translate(-50%, 0);
+        }
 
-        <p>MOM의 차량을 커스터마이징을 통해<br />
-            주문제작을 할 수 있는 페이지입니다.</p>
+        .mainVisual .slick-dots>li {
+            display: inline-block;
+            width: 15px;
+            height: 15px;
+            background: #ddd;
+            margin: 0 5px;
+            border-radius: 50%;
+        }
 
-        <p>MOM의 차량을 커스터마이징을 통해<br />
-            주문제작을 할 수 있는 페이지입니다.</p>
+        .mainVisual .slick-dots>li.slick-active {
+            background: #007fa8;
+        }
 
-        <p>MOM의 차량을 커스터마이징을 통해<br />
-            주문제작을 할 수 있는 페이지입니다.</p>
+        .mainVisual .slick-dots>li button {
+            display: none;
+        }
 
-        <p>MOM의 차량을 커스터마이징을 통해<br />
-            주문제작을 할 수 있는 페이지입니다.</p>
+        h1, h2 {
+            margin: 0;
+            padding-bottom: 10px;
+        }
+        .section-title {
+            border-bottom: 2px solid #ccc;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+        .car-option, .feature-option {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        .car-option img, .feature-option img {
+            width: 300px;
+            height: auto;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .car-option button, .feature-option button {
+            padding: 10px 20px;
+            background-color: #000;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        .car-option button:hover, .feature-option button:hover {
+            background-color: #555;
+        }
+        .selected {
+            border: 2px solid #00f;
+        }
+        #customizationForm {
+            display: flex;
+            flex-direction: column;
+        }
+        #customizationForm label {
+            margin-top: 10px;
+        }
+        #customizationForm input, 
+        #customizationForm select, 
+        #customizationForm button {
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        #customizationForm button {
+            background-color: #000;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+        #customizationForm button:hover {
+            background-color: #555;
+        }
+        .car-options, .feature-options {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        .car-options img, .feature-options img {
+            width: 100px;
+            height: auto;
+        }
+        .summary {
+            padding: 20px;
+            border: 1px solid #ccc;
+            margin-top: 20px;
+            border-radius: 5px;
+        }
+        .summary h2 {
+            margin: 0 0 10px 0;
+        }
+        .summary p {
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+    
 
-        <p>MOM의 차량을 커스터마이징을 통해<br />
-            주문제작을 할 수 있는 페이지입니다.</p>
 
-        <p>MOM의 차량을 커스터마이징을 통해<br />
-            주문제작을 할 수 있는 페이지입니다.</p>
 
-        <p>MOM의 차량을 커스터마이징을 통해<br />
-            주문제작을 할 수 있는 페이지입니다.</p>
+    
+<!-- {mainVisual -->
+<section class="mainVisual section">
+    <div class="mainSlide">
+        <figure class="itm01">
+            <div class="inner">
+                <span>Elec6 is the Future</span>
+                <p>BEV of the MOM</p>
+                <img src="./img/car07.png" alt="">
+                <div class="right">Elec5</div>
+                <div class="left">NexGen</div>
+            </div>
+        </figure>
+        <figure class="itm02">
+            <div class="inner">
+                <span>NexGen 6</span>
+                <p>스포티지 전기차</p>
+                <img src="./img/car12.png" alt="">
+                <div class="right">CASPER</div>
+                <div class="left">VENUE</div>
+            </div>
+        </figure>
+        <figure class="itm03">
+            <div class="inner">
+                <span>Big MOM</span>
+                <p>존나 큰 전기차</p>
+                <img src="./img/car08.png" alt="">
+                <div class="right">GRANDEUR</div>
+                <div class="left">IONIQ 6</div>
+            </div>
+        </figure>
+    </div>
+</section>
+<!-- mainVisual} -->
 
-        <p>MOM의 차량을 커스터마이징을 통해<br />
-            주문제작을 할 수 있는 페이지입니다.</p>
+<section id="car-selection">
+    <h2 class="section-title">Select Your Model</h2>
+    <div class="car-options">
+        <div class="car-option" id="model1" onclick="selectCar('Model 1')">
+            <img src="https://via.placeholder.com/300x200?text=Model+1" alt="Car Model 1">
+            <button>Select Model 1</button>
+        </div>
+        <div class="car-option" id="model2" onclick="selectCar('Model 2')">
+            <img src="https://via.placeholder.com/300x200?text=Model+2" alt="Car Model 2">
+            <button>Select Model 2</button>
+        </div>
+        <div class="car-option" id="model3" onclick="selectCar('Model 3')">
+            <img src="https://via.placeholder.com/300x200?text=Model+3" alt="Car Model 3">
+            <button>Select Model 3</button>
+        </div>
+    </div>
+</section>
 
-        <p>MOM의 차량을 커스터마이징을 통해<br />
-            주문제작을 할 수 있는 페이지입니다.</p>
+<section id="customization" style="display: none;">
+    <h2 class="section-title">Customize Your Car</h2>
+    <form id="customizationForm">
+        <label for="color">Color*</label>
+        <select id="color" required>
+            <option value="">Select Color</option>
+            <option value="Red">Red</option>
+            <option value="Blue">Blue</option>
+            <option value="Black">Black</option>
+            <option value="White">White</option>
+        </select>
 
-        <p>MOM의 차량을 커스터마이징을 통해<br />
-            주문제작을 할 수 있는 페이지입니다.</p>
+        <label for="wheels">Wheels*</label>
+        <select id="wheels" required>
+            <option value="">Select Wheels</option>
+            <option value="18 inch">18 inch</option>
+            <option value="19 inch">19 inch</option>
+            <option value="20 inch">20 inch</option>
+        </select>
 
-        <p>MOM의 차량을 커스터마이징을 통해<br />
-            주문제작을 할 수 있는 페이지입니다.</p>
+        <h3>Additional Features</h3>
+        <div class="feature-options">
+            <div class="feature-option">
+                <img src="https://via.placeholder.com/100?text=Autopilot" alt="Autopilot">
+                <input type="checkbox" id="feature1" value="Autopilot">
+                <label for="feature1">Autopilot</label>
+            </div>
+            <div class="feature-option">
+                <img src="https://via.placeholder.com/100?text=Premium+Interior" alt="Premium Interior">
+                <input type="checkbox" id="feature2" value="Premium Interior">
+                <label for="feature2">Premium Interior</label>
+            </div>
+            <div class="feature-option">
+                <img src="https://via.placeholder.com/100?text=Full+Self-Driving" alt="Full Self-Driving">
+                <input type="checkbox" id="feature3" value="Full Self-Driving">
+                <label for="feature3">Full Self-Driving</label>
+            </div>
+        </div>
 
-        <p>MOM의 차량을 커스터마이징을 통해<br />
-            주문제작을 할 수 있는 페이지입니다.</p>
+        <h2 class="section-title">Contact Information</h2>
+        <label for="name">Name*</label>
+        <input type="text" id="name" placeholder="Enter your Name" required>
 
-        <p>MOM의 차량을 커스터마이징을 통해<br />
-            주문제작을 할 수 있는 페이지입니다.</p>
+        <label for="email">Email*</label>
+        <input type="email" id="email" placeholder="Enter correct Email ID" required>
 
-        <p>MOM의 차량을 커스터마이징을 통해<br />
-            주문제작을 할 수 있는 페이지입니다.</p>
+        <label for="phone">Phone*</label>
+        <input type="tel" id="phone" placeholder="Enter correct Phone Number" required>
 
-        <p>MOM의 차량을 커스터마이징을 통해<br />
-            주문제작을 할 수 있는 페이지입니다.</p>
+        <label for="date">Preferred Date*</label>
+        <input type="date" id="date" required>
 
-        <p>MOM의 차량을 커스터마이징을 통해<br />
-            주문제작을 할 수 있는 페이지입니다.</p>
+        <label for="time">Preferred Time*</label>
+        <input type="time" id="time" required>
 
-        <p>MOM의 차량을 커스터마이징을 통해<br />
-            주문제작을 할 수 있는 페이지입니다.</p>
+        <div class="summary">
+            <h2>Summary</h2>
+            <p id="summaryModel"></p>
+            <p id="summaryColor"></p>
+            <p id="summaryWheels"></p>
+            <p id="summaryFeatures"></p>
+        </div>
 
-        <p>MOM의 차량을 커스터마이징을 통해<br />
-            주문제작을 할 수 있는 페이지입니다.</p>
+        <button type="submit">Submit</button>
+    </form>
+</section>
 
-        <p>MOM의 차량을 커스터마이징을 통해<br />
-            주문제작을 할 수 있는 페이지입니다.</p>
+<script>
+    $(function () {
+        $('.mainSlide').on('init afterChange', function () {
+            var currnet = $('.mainSlide .slick-current');
+            currnet.addClass('on').siblings().removeClass('on')
+        });
 
-        <p>MOM의 차량을 커스터마이징을 통해<br />
-            주문제작을 할 수 있는 페이지입니다.</p>
+        $('.mainSlide').slick({
+            dots: true,
+            autoplay: false,
+            pauseOnHover: false,
+            pauseOnFocus: false,
+        });
+    });
 
-        <p>MOM의 차량을 커스터마이징을 통해<br />
-            주문제작을 할 수 있는 페이지입니다.</p>
-            
+    let selectedModel = '';
+
+    function selectCar(model) {
+        selectedModel = model;
+        document.getElementById('car-selection').style.display = 'none';
+        document.getElementById('customization').style.display = 'block';
+        document.getElementById('summaryModel').innerText = `Model: ${model}`;
+    }
+
+    document.getElementById('color').addEventListener('change', function() {
+        document.getElementById('summaryColor').innerText = `Color: ${this.value}`;
+    });
+
+    document.getElementById('wheels').addEventListener('change', function() {
+        document.getElementById('summaryWheels').innerText = `Wheels: ${this.value}`;
+    });
+
+    document.querySelectorAll('.feature-option input').forEach(feature => {
+        feature.addEventListener('change', updateFeaturesSummary);
+    });
+
+    function updateFeaturesSummary() {
+        const selectedFeatures = Array.from(document.querySelectorAll('.feature-option input:checked'))
+            .map(feature => feature.value)
+            .join(', ');
+        document.getElementById('summaryFeatures').innerText = `Features: ${selectedFeatures}`;
+    }
+
+    document.getElementById('customizationForm').addEventListener('submit', function(event) {
+        event.preventDefault();
+        alert('Form successfully submitted');
+    });
+</script>
+</body>
+</html>
