@@ -11,24 +11,20 @@
     <script src="./js/jquery.fullpage.min.js"></script>
     <script src="./js/slick.min.js"></script>
     <style>
-        
         body {
-            background-color: #aaaaaa; /* 회색 배경 */
+            background-color: #aaaaaa;
         }
         .mainVisual {
             position: relative;
             background: url(../img/car-bg.jpg) no-repeat center center/cover;
-        
         }
-
         .mainVisual::after {
             position: absolute;
-            content: "  ";
+            content: " ";
             bottom: 40px;
             left: 50%;
             transform: translate(-50%, -50%);
         }
-
         .mainVisual::before {
             position: absolute;
             content: "";
@@ -40,12 +36,10 @@
             transform: translate(-50%, -50%);
             z-index: 999;
         }
-
         .mainVisual figure {
             height: 950px;
             position: relative;
         }
-
         .mainVisual .inner {
             position: absolute;
             top: 50%;
@@ -54,44 +48,37 @@
             width: 1200px;
             margin: 0 auto;
         }
-
         .mainVisual .inner span {
             display: inline-block;
             font-size: 60px;
             font-weight: 700;
             margin: 0 0 20px 0;
         }
-
         .mainVisual .inner p {
             font-size: 20px;
         }
-
         .mainVisual .right {
             position: absolute;
             top: 50%;
             right: -10%;
             transform: translate(-50%, -50%);
         }
-
         .mainVisual .left {
             position: absolute;
             top: 50%;
             left: -5%;
             transform: translate(-50%, -50%);
         }
-
         .mainVisual figure img {
             width: 100%;
             transform: translate(1000px, 0);
             opacity: 0;
         }
-
         .mainVisual figure.on img {
             transform: translate(0, 0);
             opacity: 1;
             transition: transform 1s;
         }
-
         .mainVisual .slick-arrow {
             position: absolute;
             top: 50%;
@@ -107,24 +94,20 @@
             border-left: 2px solid rgba(0, 0, 0, 0.5);
             display: none;
         }
-
         .mainVisual .slick-prev {
             transform: translate(-50%, -50%) rotate(-45deg);
             margin: 0 0 0 -700px;
         }
-
         .mainVisual .slick-next {
             transform: translate(-50%, -50%) rotate(135deg);
             margin: 0 0 0 700px;
         }
-
         .mainVisual .slick-dots {
             position: absolute;
             bottom: 200px;
             left: 50%;
             transform: translate(-50%, 0);
         }
-
         .mainVisual .slick-dots>li {
             display: inline-block;
             width: 15px;
@@ -133,15 +116,12 @@
             margin: 0 5px;
             border-radius: 50%;
         }
-
         .mainVisual .slick-dots>li.slick-active {
             background: #007fa8;
         }
-
         .mainVisual .slick-dots>li button {
             display: none;
         }
-
         h1, h2 {
             margin: 0;
             padding-bottom: 10px;
@@ -158,8 +138,8 @@
             margin-bottom: 20px;
         }
         .car-option img, .feature-option img {
-            width: 300px;
-            height: auto;
+            width: 350px;
+            height: 190px;
             margin-bottom: 10px;
             border: 1px solid #ccc;
             border-radius: 5px;
@@ -182,6 +162,8 @@
         #customizationForm {
             display: flex;
             flex-direction: column;
+            max-width: 600px;
+            margin: 0 auto;
         }
         #customizationForm label {
             margin-top: 10px;
@@ -190,9 +172,18 @@
         #customizationForm select, 
         #customizationForm button {
             padding: 10px;
-            margin-top: 5px;
+            margin-top: 15px;
             border: 1px solid #ccc;
             border-radius: 5px;
+            width: 100%;
+        }
+        #customizationForm select {
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            background: url('data:image/svg+xml;utf8,<svg fill="%23000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>') no-repeat right 10px center;
+            background-color: #fff;
+            padding-right: 30px;
         }
         #customizationForm button {
             background-color: #000;
@@ -205,12 +196,11 @@
         }
         .car-options, .feature-options {
             display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
+            justify-content: space-around;
+            gap: 20px;
         }
-        .car-options img, .feature-options img {
-            width: 100px;
-            height: auto;
+        .feature-options {
+            margin-top: 30px;
         }
         .summary {
             padding: 20px;
@@ -224,180 +214,179 @@
         .summary p {
             margin: 5px 0;
         }
+        .form-footer {
+            margin-bottom: 50px;
+        }
     </style>
 </head>
 <body>
-    
-
-
-
-    
-<!-- {mainVisual -->
-<section class="mainVisual section">
-    <div class="mainSlide">
-        <figure class="itm01">
-            <div class="inner">
-                <span>Elec6 is the Future</span>
-                <p>BEV of the MOM</p>
-                <img src="./img/car07.png" alt="">
-                <div class="right">Elec5</div>
-                <div class="left">NexGen</div>
-            </div>
-        </figure>
-        <figure class="itm02">
-            <div class="inner">
-                <span>NexGen 6</span>
-                <p>스포티지 전기차</p>
-                <img src="./img/car12.png" alt="">
-                <div class="right">CASPER</div>
-                <div class="left">VENUE</div>
-            </div>
-        </figure>
-        <figure class="itm03">
-            <div class="inner">
-                <span>Big MOM</span>
-                <p>존나 큰 전기차</p>
-                <img src="./img/car08.png" alt="">
-                <div class="right">GRANDEUR</div>
-                <div class="left">IONIQ 6</div>
-            </div>
-        </figure>
-    </div>
-</section>
-<!-- mainVisual} -->
-
-<section id="car-selection">
-    <h2 class="section-title">Select Your Model</h2>
-    <div class="car-options">
-        <div class="car-option" id="model1" onclick="selectCar('Model 1')">
-            <img src="https://via.placeholder.com/300x200?text=Model+1" alt="Car Model 1">
-            <button>Select Model 1</button>
+    <section class="mainVisual section">
+        <div class="mainSlide">
+            <figure class="itm01">
+                <div class="inner">
+                    <span>MOM 5 is the Future</span>
+                    <p>MOM 5, 2024 '유럽 올해의 차' 수상</p>
+                    <img src="./img/car07.png" alt="">
+                    <div class="right">NexGen23</div>
+                    <div class="left">ELEC TURTLE</div>
+                </div>
+            </figure>
+            <figure class="itm02">
+                <div class="inner">
+                    <span>NexGen23</span>
+                    <p>MOM 대표 스포티지 승용차</p>
+                    <img src="./img/car12.png" alt="">
+                    <div class="right">ELEC TURTLE</div>
+                    <div class="left">MOM 5</div>
+                </div>
+            </figure>
+            <figure class="itm03">
+                <div class="inner">
+                    <span>ELEC TURTLE</span>
+                    <p>2023 영국 카바이어어워드 '최우수 대형 패밀리카' 수상</p>
+                    <img src="./img/car08.png" alt="">
+                    <div class="right">MOM 5</div>
+                    <div class="left">NexGen23</div>
+                </div>
+            </figure>
         </div>
-        <div class="car-option" id="model2" onclick="selectCar('Model 2')">
-            <img src="https://via.placeholder.com/300x200?text=Model+2" alt="Car Model 2">
-            <button>Select Model 2</button>
-        </div>
-        <div class="car-option" id="model3" onclick="selectCar('Model 3')">
-            <img src="https://via.placeholder.com/300x200?text=Model+3" alt="Car Model 3">
-            <button>Select Model 3</button>
-        </div>
-    </div>
-</section>
+    </section>
 
-<section id="customization" style="display: none;">
-    <h2 class="section-title">Customize Your Car</h2>
-    <form id="customizationForm">
-        <label for="color">Color*</label>
-        <select id="color" required>
-            <option value="">Select Color</option>
-            <option value="Red">Red</option>
-            <option value="Blue">Blue</option>
-            <option value="Black">Black</option>
-            <option value="White">White</option>
-        </select>
-
-        <label for="wheels">Wheels*</label>
-        <select id="wheels" required>
-            <option value="">Select Wheels</option>
-            <option value="18 inch">18 inch</option>
-            <option value="19 inch">19 inch</option>
-            <option value="20 inch">20 inch</option>
-        </select>
-
-        <h3>Additional Features</h3>
-        <div class="feature-options">
-            <div class="feature-option">
-                <img src="https://via.placeholder.com/100?text=Autopilot" alt="Autopilot">
-                <input type="checkbox" id="feature1" value="Autopilot">
-                <label for="feature1">Autopilot</label>
+    <section id="car-selection">
+        <h2 class="section-title">Select Your Model</h2>
+        <div class="car-options">
+            <div class="car-option" id="model1" onclick="selectCar('MOM 5')">
+                <img src="./img/car07.png" alt="Car Model 1">
+                <button>MOM 5</button>
             </div>
-            <div class="feature-option">
-                <img src="https://via.placeholder.com/100?text=Premium+Interior" alt="Premium Interior">
-                <input type="checkbox" id="feature2" value="Premium Interior">
-                <label for="feature2">Premium Interior</label>
+            <div class="car-option" id="model2" onclick="selectCar('NexGen23')">
+                <img src="./img/car12.png" alt="Car Model 2">
+                <button>NexGen23</button>
             </div>
-            <div class="feature-option">
-                <img src="https://via.placeholder.com/100?text=Full+Self-Driving" alt="Full Self-Driving">
-                <input type="checkbox" id="feature3" value="Full Self-Driving">
-                <label for="feature3">Full Self-Driving</label>
+            <div class="car-option" id="model3" onclick="selectCar('ELEC TURTLE')">
+                <img src="./img/car08.png" alt="Car Model 3">
+                <button>ELEC TURTLE</button>
             </div>
         </div>
+    </section>
 
-        <h2 class="section-title">Contact Information</h2>
-        <label for="name">Name*</label>
-        <input type="text" id="name" placeholder="Enter your Name" required>
+    <section id="customization" style="display: none;">
+        <h2 class="section-title">Customize Your Car</h2>
+        <form id="customizationForm">
+            <label for="color">Color *</label>
+            <select id="color" required>
+                <option value="">Select Color</option>
+                <option value="Red">Red</option>
+                <option value="Blue">Blue</option>
+                <option value="Black">Black</option>
+                <option value="White">White</option>
+            </select>
 
-        <label for="email">Email*</label>
-        <input type="email" id="email" placeholder="Enter correct Email ID" required>
+            <label for="wheels">Wheels *</label>
+            <select id="wheels" required>
+                <option value="">Select Wheels</option>
+                <option value="18 inch">18 inch</option>
+                <option value="19 inch">19 inch</option>
+                <option value="20 inch">20 inch</option>
+            </select>
 
-        <label for="phone">Phone*</label>
-        <input type="tel" id="phone" placeholder="Enter correct Phone Number" required>
+            <h3>Additional Features</h3>
+            <div class="feature-options">
+                <div class="feature-option">
+                    <img src="./img/autopilot1.png" alt="Autopilot">
+                    <input type="checkbox" id="feature1" value="Autopilot">
+                    <label for="feature1">Autopilot</label>
+                </div>
+                <div class="feature-option">
+                    <img src="./img/interior.jpg" alt="Premium Interior">
+                    <input type="checkbox" id="feature2" value="Premium Interior">
+                    <label for="feature2">Premium Interior</label>
+                </div>
+                <div class="feature-option">
+                    <img src="./img/fullself.jpg" alt="Full Self-Driving">
+                    <input type="checkbox" id="feature3" value="Full Self-Driving">
+                    <label for="feature3">Full Self-Driving</label>
+                </div>
+            </div>
 
-        <label for="date">Preferred Date*</label>
-        <input type="date" id="date" required>
+            <h2 class="section-title">Contact Information</h2>
+            <label for="name">이름 *</label>
+            <input type="text" id="name" placeholder="Enter your Name" required>
 
-        <label for="time">Preferred Time*</label>
-        <input type="time" id="time" required>
+            <label for="email">이메일 *</label>
+            <input type="email" id="email" placeholder="Enter correct Email ID" required>
 
-        <div class="summary">
-            <h2>Summary</h2>
-            <p id="summaryModel"></p>
-            <p id="summaryColor"></p>
-            <p id="summaryWheels"></p>
-            <p id="summaryFeatures"></p>
-        </div>
+            <label for="phone">전화번호 *</label>
+            <input type="tel" id="phone" placeholder="Enter correct Phone Number" required>
 
-        <button type="submit">Submit</button>
-    </form>
-</section>
+            <label for="date">선호 날짜 *</label>
+            <input type="date" id="date" required>
 
-<script>
-    $(function () {
-        $('.mainSlide').on('init afterChange', function () {
-            var currnet = $('.mainSlide .slick-current');
-            currnet.addClass('on').siblings().removeClass('on')
+            <label for="time">선호 시간대 *</label>
+            <input type="time" id="time" required>
+
+            <div class="summary">
+                <h2>견적 내용</h2>
+                <p id="summaryModel"></p>
+                <p id="summaryColor"></p>
+                <p id="summaryWheels"></p>
+                <p id="summaryFeatures"></p>
+            </div>
+
+            <button type="submit">제출하기</button>
+            <div class="form-footer"></div>
+        </form>
+    </section>
+
+    <script>
+        $(function () {
+            $('.mainSlide').on('init afterChange', function () {
+                var currnet = $('.mainSlide .slick-current');
+                currnet.addClass('on').siblings().removeClass('on')
+            });
+
+            $('.mainSlide').slick({
+                dots: true,
+                autoplay: false,
+                pauseOnHover: false,
+                pauseOnFocus: false,
+            });
         });
 
-        $('.mainSlide').slick({
-            dots: true,
-            autoplay: false,
-            pauseOnHover: false,
-            pauseOnFocus: false,
+        let selectedModel = '';
+
+        function selectCar(model) {
+            selectedModel = model;
+            document.getElementById('car-selection').style.display = 'none';
+            document.getElementById('customization').style.display = 'block';
+            document.getElementById('summaryModel').innerText = `Model: ${model}`;
+        }
+
+        document.getElementById('color').addEventListener('change', function() {
+            document.getElementById('summaryColor').innerText = `Color: ${this.value}`;
         });
-    });
 
-    let selectedModel = '';
+        document.getElementById('wheels').addEventListener('change', function() {
+            document.getElementById('summaryWheels').innerText = `Wheels: ${this.value}`;
+        });
 
-    function selectCar(model) {
-        selectedModel = model;
-        document.getElementById('car-selection').style.display = 'none';
-        document.getElementById('customization').style.display = 'block';
-        document.getElementById('summaryModel').innerText = `Model: ${model}`;
-    }
+        document.querySelectorAll('.feature-option input').forEach(feature => {
+            feature.addEventListener('change', updateFeaturesSummary);
+        });
 
-    document.getElementById('color').addEventListener('change', function() {
-        document.getElementById('summaryColor').innerText = `Color: ${this.value}`;
-    });
+        function updateFeaturesSummary() {
+            const selectedFeatures = Array.from(document.querySelectorAll('.feature-option input:checked'))
+                .map(feature => feature.value)
+                .join(', ');
+            document.getElementById('summaryFeatures').innerText = `Features: ${selectedFeatures}`;
+        }
 
-    document.getElementById('wheels').addEventListener('change', function() {
-        document.getElementById('summaryWheels').innerText = `Wheels: ${this.value}`;
-    });
-
-    document.querySelectorAll('.feature-option input').forEach(feature => {
-        feature.addEventListener('change', updateFeaturesSummary);
-    });
-
-    function updateFeaturesSummary() {
-        const selectedFeatures = Array.from(document.querySelectorAll('.feature-option input:checked'))
-            .map(feature => feature.value)
-            .join(', ');
-        document.getElementById('summaryFeatures').innerText = `Features: ${selectedFeatures}`;
-    }
-
-    document.getElementById('customizationForm').addEventListener('submit', function(event) {
-        event.preventDefault();
-        alert('Form successfully submitted');
-    });
-</script>
+        document.getElementById('customizationForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            if (confirm('제출하시겠습니까?')) {
+                alert('성공적으로 제출되었습니다. 입력하신 이메일과 전화번호로 안내문자 전송해드리겠습니다.');
+            }
+        });
+    </script>
 </body>
 </html>

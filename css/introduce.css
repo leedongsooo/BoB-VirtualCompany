@@ -36,11 +36,11 @@ body {
 /* 인트로 헤더 스타일 */
 .intro-header {
     position: relative;
-    background-image: url('../img/port04_01.jpg');
+    background-image: url('../img/company.png');
     background-size: cover;
     background-repeat: no-repeat; 
     background-position: center; 
-    height: 400px;
+    height: 500px;
     display: flex;
     align-items: center;
     justify-content: center;

@@ -1049,3 +1049,79 @@
 }
 
 /* footer} */
+
+
+/* Add your existing CSS code here */
+#customizationForm {
+    display: flex;
+    flex-direction: column;
+    max-width: 650px;
+    margin: 0 auto;
+}
+
+#customizationForm input, 
+#customizationForm select, 
+#customizationForm button {
+    padding: 10px;
+    margin-top: 5px; /* Increase margin to create more space */
+    margin-bottom: 15px; /* Increase margin to create more space */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+}
+
+#customizationForm select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background: url('data:image/svg+xml;utf8,<svg fill="%23000" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>') no-repeat right 10px center;
+    background-color: #fff;
+    margin-bottom: 45px; /* Increase margin to create more space */
+    padding-right: 30px;
+}
+
+#customizationForm button {
+    background-color: #000;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    margin-bottom: 15px; /* Increase margin to create more space */
+    margin-top: 1px; /* Increase margin to create more space */
+}
+
+#customizationForm button:hover {
+    background-color: #555;
+}
+
+.car-options, .feature-options {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: px;
+    
+}
+
+.feature-options {
+    margin-bottom: 50px; /* Add space below the submit buttons */
+    margin-top: 40px; /* Increase space above Additional Features */
+}
+
+.summary {
+    padding: 20px;
+    border: 1px solid #ccc;
+    margin-top: 20px;
+    border-radius: 5px;
+
+}
+
+.summary h2 {
+    margin: 0 0 10px 0;
+}
+
+.summary p {
+    margin: 5px 0;
+}
+
+.form-footer {
+    margin-bottom: 50px; /* Add space below the submit button */
+}
