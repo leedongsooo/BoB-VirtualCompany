@@ -139,3 +139,40 @@ body {
     width: 100%;
     height: 400px;
 }
+
+
+/* introduce.css */
+.organization-chart-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 500px; /* Adjust as needed */
+    height: 300px; /* Adjust as needed */
+}
+
+/* introduce.css */
+.organization-chart {
+
+    width: 680px; /* or any desired width */
+    height: 250px; /* or any desired height */
+}
+
+/* introduce.css */
+.image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 400px; /* Ensure all containers are the same height */
+    border: 1px solid #ddd; /* Optional: Add a border for better visualization */
+}
+
+.organization-chart, .road-chart {
+    max-width: 980px;
+    max-height: 100%;
+    height: auto;
+}
+
+
+
+

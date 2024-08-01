@@ -40,17 +40,17 @@
                         <p>안녕하십니까? MoM 모터스의 CEO 김오비입니다. <br />MOM 모터스는 1985년에 설립된 글로벌 자동차 제조업체로, 디지털 트윈과 AI 기술을 통해 혁신적인 차량 생산을 이끌어가고 있습니다. <br /> MOM 모터스는 전기차(BEV)와 자율주행차를 주력으로 하며, 북미, 유럽, 아시아 시장을 중심으로 글로벌 확장을 도모하고 있습니다.  <br />고객 여러분의 성원에 감사드리며, 앞으로도 최선을 다하겠습니다.</p>
                     </div>
                     
-<!-- 회사 정보 섹션 -->
-<div class="company-details">
-    <h3>회사 정보</h3>
-    <ul>
-        <li><strong>설립연도:</strong> 1985년</li>
-        <li><strong>대표이사:</strong> 김오비</li>
-        <li><strong>직원 수:</strong> 52,748명</li>
-        <li><strong>주요 사업:</strong> 자동차 제조 및 판매</li>
-        <li><strong>본사 위치:</strong> 서울특별시 강남구 테헤란로 123</li>
-    </ul>
-</div>
+                    <!-- 회사 정보 섹션 -->
+                    <div class="company-details">
+                        <h3>회사 정보</h3>
+                        <ul>
+                            <li><strong>설립연도:</strong> 1985년</li>
+                            <li><strong>대표이사:</strong> 김오비</li>
+                            <li><strong>직원 수:</strong> 52,748명</li>
+                            <li><strong>주요 사업:</strong> 자동차 제조 및 판매</li>
+                            <li><strong>본사 위치:</strong> 서울특별시 강남구 테헤란로 123</li>
+                        </ul>
+                    </div>
 
                     <!-- 기업이념 섹션 -->
                     <div class="philosophy">
@@ -63,7 +63,7 @@
                         <h3>기업연혁</h3>
                         <ul>
                             <li><strong>2023년 :</strong> MOM5, NEXGEN23 출시</li>
-                            <li><strong>2022년 :</strong> 아산 공장, 디지털 트윈 도입, 중장기 전동화 전략 공개, NEXGEN22 및 ELEC TURTLE 출시</li>
+                            <li><strong>2022년 :</strong> 아산 공장 완공(스마트 팩토리 및 디지털 트윈 도입), 중장기 전동화 전략 공개, NEXGEN22 및 ELEC TURTLE 출시</li>
                             <li><strong>2021년 :</strong> NEXGEN20(전동화모델), 2세대 MOM-EV, 더 뉴미니 출시</li>
                             <li><strong>2020년 :</strong> NEXGEN20, 중형 전기 버스 출시 및 수소전기 대형트럭 세계 최초 양산</li>
                             <li><strong>2019년 :</strong> MOM-EV, NEXGEN, 미니 9 출시</li>
@@ -83,42 +83,31 @@
                             <li><strong>2023년 :</strong> 글로벌 모터 어워드 혁신상</li>
                             <li><strong>2022년 :</strong> 베스트 디자인 어워드</li>
                             <li><strong>2021년 :</strong> 최고 품질상</li>
-                            <li><strong>2020년 :</strong> 환경 친화적 기업상</li>
-                            <li><strong>2019년 :</strong> 고객 만족도 1위</li>
+                            <li><strong>2020년 :</strong> MOM-EV, 독일 '아우통 자이퉁'의 전기차 비교평가에서 종합 1위</li>
+                            <li><strong>2019년 :</strong> MOM-EV, 모터트렌드 '올해의 BEV' 선정</li>
                         </ul>
                     </div>
 
                     <!-- 조직도 섹션 -->
                     <div class="organization">
-                        <h3>조직도</h3>
-                        <img src="../img/organization-chart.png" alt="조직도">
+                        <h3>기업 조직도</h3>
+                        <div class="organization-chart-container image-container">
+                            <img src="../img/members.png" alt="조직도" class="organization-chart">
+                        </div>
                     </div>
 
                     <!-- 찾아오는 길 섹션 -->
-                    <div class="location">
-                        <h3>찾아오는 길</h3>
-                        <div id="map"></div>
+                    <div class="organization">
+                        <h3>오시는 길</h3>
+                        <div class="organization-chart-container image-container">
+                            <img src="../img/road.png" alt="오시는 길" class="road-chart">
+                        </div>
                     </div>
                 </div>
             </section>
         </main>
     </div>
 
-    <!-- 구글 지도 API -->
-    <script>
-        function initMap() {
-            var map = new google.maps.Map(document.getElementById('map'), {
-                center: { lat: 37.5665, lng: 126.9780 },
-                zoom: 15
-            });
-            var marker = new google.maps.Marker({
-                position: { lat: 37.5665, lng: 126.9780 },
-                map: map,
-                title: 'MOM 모터스 본사'
-            });
-        }
-    </script>
-    <script async defer src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap"></script>
 </body>
 
 </html>

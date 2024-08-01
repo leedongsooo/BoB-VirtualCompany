@@ -1125,3 +1125,424 @@
 .form-footer {
     margin-bottom: 50px; /* Add space below the submit button */
 }
+
+
+
+
+
+/*Reset 시작*/
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+a                     { text-decoration: none;}
+a:link               {color: #333;}
+a:visited           {color: #333;}
+a:active            {color: #222;}
+a:hover            {color: #222;}
+ul                    {list-style: none;}
+img                 {vertical-align: middle;}
+
+/*Reset 끝*/
+
+
+/* 가이드 라인 */
+/*div#wrap                {border: 1px solid #000;}*/
+/*main#main             {border: 1px solid #000;}*/
+/*aside#aside                {border: 1px solid #000;}*/
+
+
+/* 가이드 라인 */
+
+/*div#wrap*/
+div#wrap {
+    height: 1000px;
+    margin: 0px auto;
+    padding-top: 30px;
+    background-color: #ececec;
+}
+
+/*div#wrap*/
+
+/*main#main*/
+main#main {
+    width: 1376px;
+    height: 490px;
+    margin: 30px auto;
+    padding-top: 1px;
+
+    background-color: #fff;
+    border-radius: 10px;
+    /*    border: 1px solid #000;*/
+}
+
+#main #headerLogo {
+    margin: 20px 0;
+    text-align: center;
+}
+
+/*nav#gnb*/
+nav#gnb {
+    margin-bottom: 20px;
+    display: inline-block;
+}
+
+nav#gnb #mainMenu > li {
+    float: left;
+}
+
+nav#gnb #mainMenu > li a {
+    width: 172px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    color: #555;
+    border: 1px solid #d1dae0;
+    border-right: none;
+    font-size: 19px;
+    font-weight: bold;
+
+    display: inline-block;
+}
+
+nav#gnb #mainMenu > li:first-child a {
+    background-color: #16a841;
+    color: #fff;
+    border-left: none;
+}
+
+nav#gnb #mainMenu > li a:hover {
+    color: #16a841;
+}
+
+/*nav#gnb*/
+
+
+/*slide*/
+#slide {
+    width: 1376px;
+    text-align: center;
+    /*    border: 1px solid #000;*/
+}
+
+#slide #slideArea {
+    width: 1154px;
+    /*    border: 1px solid #000;*/
+    display: inline-block;
+    overflow: hidden;
+}
+
+#slide #shuttleFrame {
+    width: 1450px;
+
+    display: flex;
+}
+
+
+#slide #slideArea #shuttleFrame #slideImg {
+    width: 267px;
+    height: 300px;
+    margin-right: 28px;
+    border: 1px solid #ddd;
+}
+
+/* 슬라이드 텍스트 */
+
+#slide #slideImg #slideTxtArea {
+    width: 215px;
+    margin: 0 auto;
+}
+
+#slide #slideImg #slideTxtArea span#title {
+    width: 210px;
+    margin: 15px 0;
+    color: #2a9a5c;
+
+    text-align: left;
+    font-size: 19px;
+    font-weight: bold;
+    display: inline-block;
+}
+
+#slide #slideImg #slideTxtArea p {
+    padding-bottom: 10px;
+
+    color: #666;
+    text-align: left;
+    font-size: 15px;
+    font-weight: bold;
+
+    border-bottom: 1px dotted #ccc;
+
+}
+
+#slide #slideImg #slideTxtArea span#Tell {
+    width: 220px;
+    padding: 7px 0;
+    margin-left: -30px;
+    font-size: 15px;
+    font-weight: bold;
+    color: #666;
+    display: inline-block;
+}
+
+/* 슬라이드 텍스트 */
+
+/* 슬라이드 좌우 이동 아이콘 */
+#main #slide #Back,
+#Next {
+    margin: 0 20px;
+
+    position: relative;
+    bottom: 140px;
+}
+
+/* 슬라이드 좌우 이동 아이콘 */
+
+/*slide*/
+
+/*main#main*/
+
+
+
+/*aside#aside*/
+aside#aside {
+    width: 1376px;
+    height: 350px;
+    /*    margin-top: 5px;*/
+    margin: 0px auto;
+
+    display: flex;
+}
+
+/* aside 버튼 */
+#aside #asideBtnArea hr {
+    margin-top: -1px;
+
+    border: 1px solid #ccc;
+}
+
+#aside #asideBtnArea button {
+    width: 115px;
+    height: 55px;
+    padding-left: 33px;
+    cursor: pointer;
+    background-color: #fff;
+    border: none;
+    outline: none;
+
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#aside #asideBtnArea > #noticeBtn {
+    margin-right: 5px;
+}
+
+#aside #asideBtnArea > #noticeBtn > img {
+    position: relative;
+    top: -4px;
+}
+
+#aside #asideBtnArea #newsBtn {
+    color: #777;
+}
+
+#aside #asideBtnArea #noticeBtn > .tabIcon2 {
+    display: none;
+}
+
+#aside #asideBtnArea .tabIcon2 {
+    margin-right: 6px;
+    position: relative;
+    top: -3px;
+}
+
+#aside #asideBtnArea #moreIcon {
+    position: relative;
+    left: 602px;
+    bottom: 10px;
+}
+
+.asideContents a:hover .asideContentsTxt {
+    color: #e33b3b;
+    transition: 0.3s;
+    text-decoration: underline;
+}
+.asideContents a:hover p {
+    text-decoration: underline;
+}
+
+/* //////////// 버튼 선택자 //////////// */
+#aside #asideBtnArea button.select {
+    border-bottom: 3px solid #e33b3b;
+    color: #e33b3b;
+    background-image: url(../images/tabIcon.png);
+    background-repeat: no-repeat;
+    background-position: 0px;
+
+}
+#aside #asideBtnArea button.noSelect {
+    color: #777;
+    background-image: url(../images/tabIcon2.png);
+    background-repeat: no-repeat;
+    background-position: 12px;
+}
+/* //////////// 버튼 선택자 //////////// */
+
+/* aside 버튼 */
+
+
+
+/* div#asideCon1 */
+#aside #asideCon1 {
+    width: 930px;
+    height: 360px;
+    padding: 25px;
+    border-radius: 10px;
+    background-color: #fff;
+}
+
+/* /////////// 공지사항 내용 ////////// */
+#aside .asideContents {
+    height: 250px;
+    /*    border: 1px solid #000;*/
+    justify-content: space-between;
+}
+
+#aside .asideContents1 {
+    display: flex;
+}
+
+#aside .asideContents2 {
+    display: flex;
+}
+
+#aside .asideContents a {
+    width: 450px;
+    height: 100px;
+    margin-top: 30px;
+    /*    border: 1px solid #000;*/
+    display: inline-block;
+
+    display: flex;
+}
+
+#aside .asideContents a > #day {
+    width: 85px;
+    height: 85px;
+    margin-right: 10px;
+    text-align: center;
+    border-radius: 600px;
+    background-color: #eee;
+}
+
+#aside .asideContents a > #day > b {
+    padding-top: 5px;
+    display: inline-block;
+    font-size: 29px;
+    font-weight: bold;
+    color: #ef6363;
+}
+
+#aside .asideContents a > #day > span {
+    font-size: 14px;
+}
+
+#aside .asideContents a > .asideContentsTxt > h3 {
+    margin: 5px 0;
+    letter-spacing: 1px;
+}
+
+#aside .asideContents a > .asideContentsTxt > p {
+    width: 310px;
+    height: 100px;
+
+    color: #666;
+    text-align: justify;
+    font-size: 14px;
+
+    display: inline-block;
+}
+
+
+div#news {
+    display: none;
+}
+
+/* div#asideCon1 */
+
+
+/* div#asideCon2 */
+#aside #asideCon2 {
+    width: 426px;
+    height: 360px;
+    margin-left: 20px;
+
+    border-radius: 10px;
+    background-color: #fff;
+}
+#aside #asideCon2 #slideTitle {
+    padding: 25px;
+    display: flex;
+    justify-content: space-between;
+}
+#aside #asideCon2 #slideTitle h2 {
+    font-weight: 500;
+}
+
+
+    /* ////////// 슬라이드 /////////*/
+#aside #asideSlide {
+    width: 375px;
+    margin: 0 auto;
+
+    overflow: hidden;
+}
+#aside #asideSlide>#shuttleFrame2 {
+    width: 1150px;
+}
+#aside #asideSlide>#shuttleFrame2 a {
+    width: 375px;
+    float: left;
+}
+
+
+    /* 슬라이드 버튼 */
+#aside #asideCon2 #slideTitle a {
+    display: inline-block;
+    margin: 0 3px;
+}
+#asideCon2 #slideBtnArea a#pasNstr {
+    margin-left: 4px;
+}
+#asideCon2 #slideBtnArea a#pasNstr>img:first-child {
+    display: none;
+}
+    /* 슬라이드 버튼 */
+
+    /* ////////// 슬라이드 /////////*/
+
+
+/* div#asideCon2 */
+
+/*aside#aside*/
+
+
+
+
+
+header, main, aside, footer, nav {
+    display: block;
+}
+
+
+
+
+
+
+
+
+
