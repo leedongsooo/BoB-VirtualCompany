@@ -10,7 +10,6 @@ BoB 13기 보안컨설팅 트랙 가상기업 제조조 - MOM 웹사이트
 
 <img width="1512" alt="6" src="https://github.com/user-attachments/assets/51068e23-e5e7-4af6-b4a9-63f6b3ba8038" />
 
-<img width="1512" alt="7" src="https://github.com/user-attachments/assets/1fc1a13b-16e0-428e-9ccb-0ea0c03b6444" />
-
 <img width="1512" alt="8" src="https://github.com/user-attachments/assets/a2565e24-2b50-4800-9966-098ec9f8ac19" />
 
+<img width="1512" alt="7" src="https://github.com/user-attachments/assets/1fc1a13b-16e0-428e-9ccb-0ea0c03b6444" />
